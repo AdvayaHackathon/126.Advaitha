@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dashboard {
+            text-align: center;
+            margin-top: 80px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 15px;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .dashboard h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .dashboard p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .dashboard button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #ff7200;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .dashboard button:hover {
+            background-color: #e66000;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Welcome to Travel Wanders!</h1>
+        <p>You've successfully logged in. Ready to book restrooms or explore travel options?</p>
+        <button onclick="bookRestroom()">Book a Restroom</button>
+    </div>
+
+    <script>
+        function bookRestroom() {
+            alert('Restroom booking feature coming soon!');
+        }
+    </script>
+</body>
+</html>

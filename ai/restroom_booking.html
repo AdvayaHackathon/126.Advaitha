@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Restroom Booking - Travel Buddy</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mobile Restroom Booking</h1>
+    </header>
+
+    <main>
+        <div class="restroom-info">
+            <h2>Your Personal Restroom, On Demand!</h2>
+            <img src="images/toilet.jpg" alt="Mobile Restroom Vehicle" class="restroom-image">
+            <p>Need a clean, private restroom facility delivered quickly to your location? Our modified vehicle brings a comfortable toilet room directly to you.</p>
+            <p>Ideal for outdoor events, photoshoots, remote locations, or any situation where facilities are unavailable or inconvenient.</p>
+            
+            <h3>How it Works:</h3>
+            <ol>
+                <li>Enter your current location (or desired location).</li>
+                <li>Select the date and approximate time you need the facility.</li>
+                <li>Submit your booking request.</li>
+                <li>Our mobile restroom vehicle will be dispatched to reach you promptly.</li>
+            </ol>
+
+            <div class="booking-section">
+                <h3>Book the Mobile Restroom</h3>
+                <form id="restroom-booking-form"> <!-- Removed action and method -->
+                    
+                    <label for="location">Your Location (Address or Landmark):</label><br>
+                    <input type="text" id="location" name="location" required><br><br>
+
+                    <label for="date">Date:</label><br>
+                    <input type="date" id="date" name="date" required><br><br>
+
+                    <label for="time">Approximate Time:</label><br>
+                    <input type="time" id="time" name="time" required><br><br>
+
+                    <button type="submit" class="book-button">Request Mobile Restroom</button>
+                    <p id="restroom-confirm-msg" class="booking-confirm-msg"></p>
+                </form>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="dashboard.html">Back to Dashboard</a>
+        </div>
+
+    </main>
+
+    <script src="js/restroom.js"></script> <!-- Changed JS link -->
+</body>
+</html> 

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="login_style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Travel wanders</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">ASSISTANCE</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div> 
+
+        <div class="content">
+            <h1>TRAVEL<br><span>WITH A </span> <br>COMPANION</h1>
+            <p class="par">YOU WILL NEVER TRAVEL ALONE <br> THE WORLD IS FULL OF FRIENDS
+                <br> WAITING TO GET TO KNOW YOU</p>
+
+            <button class="cn"><a href="#">JOIN US</a></button>
+
+            <!-- Login Form Starts Here -->
+            <form class="form">
+                <h2>Login Here</h2>
+                <input type="email" id="email" placeholder="Enter Email Here">
+                <input type="password" id="password" placeholder="Enter Password Here">
+                <button type="submit" class="btnn">Login</button>
+
+                <p class="link">Don't have an account<br>
+                <a href="#">Sign up </a> here</p>
+                <p class="liw">Log in with</p>
+
+                <div class="icons">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Recommended Ionicons script tags -->
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Clean Login Script -->
+    <script>
+        const form = document.querySelector('.form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const email = document.querySelector('#email').value;
+            const password = document.querySelector('#password').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+                if (data.success) {
+                    alert('Login successful!');
+                    window.location.href = 'dashboard.html'; // go to welcome page
+                } else {
+                    alert(data.message); // Invalid login
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Something went wrong');
+            }
+        });
+    </script>
+</body>
+</html>

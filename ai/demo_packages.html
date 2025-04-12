@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Packages - Travel Buddy</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Travel Demo Packages</h1>
+    </header>
+
+    <main>
+        <p>Explore our curated travel packages designed for an unforgettable experience.</p>
+
+        <div class="package-list">
+            <div class="package-item">
+                <h2>South India Explorer (5 Days / 4 Nights)</h2>
+                <img src="images/south.jpg" alt="South India Package" class="package-image">
+                <p>Discover the vibrant culture, serene landscapes, and historical wonders of South India.</p>
+                
+                <h3>Itinerary Highlights:</h3>
+                <ul>
+                    <li>Day 1: Arrival in Bangalore, City Tour (Botanical Garden, Palace)</li>
+                    <li>Day 2: Drive to Mysore, Visit Mysore Palace & Brindavan Gardens</li>
+                    <li>Day 3: Explore Mysore (Chamundi Hills), Drive to Ooty</li>
+                    <li>Day 4: Ooty Sightseeing (Botanical Garden, Ooty Lake, Doddabetta Peak)</li>
+                    <li>Day 5: Departure from Coimbatore/Bangalore</li>
+                </ul>
+
+                <h3>Package Includes:</h3>
+                <ul>
+                    <li>Accommodation in standard hotels</li>
+                    <li>Breakfast included</li>
+                    <li>Private AC vehicle for transfers and sightseeing</li>
+                    <li>Standard entry fees</li>
+                </ul>
+                
+                <p class="package-price">Price: Approx. ₹10,000 per person</p>
+
+                <div class="booking-section">
+                    <h3>Book This Package</h3>
+                    <form id="booking-form-south-india">
+                        <label for="assistance-needed"> 
+                            <input type="checkbox" id="assistance-needed" name="assistance"> Require disability assistance?
+                        </label>
+                        <br><br>
+                        <button type="submit" class="book-button">Confirm Booking Inquiry</button>
+                        <p id="package-booking-confirmation" class="booking-confirm-msg"></p>
+                    </form>
+                </div>
+            </div>
+            <!-- Add more packages here if needed -->
+        </div>
+        
+        <div class="back-link">
+            <a href="dashboard.html">Back to Dashboard</a>
+        </div>
+
+    </main>
+    
+    <script src="js/packages.js"></script>
+</body>
+</html> 
