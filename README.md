@@ -19,7 +19,8 @@ Welcome to the Hackathon! We're excited to have you on board and can't wait to s
 
 ## Problem Statement
 
-> **A tool that enhances the tourist experience, promotes cultural understanding, and encourages respons...**
+> **A tool that enhances the tourist experience, promotes cultural understanding, and encourages respons...
+> note: login email id : admin@example.com password : admin123**
 
 ---
 
